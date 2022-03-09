@@ -1,0 +1,16 @@
+PODS:
+  - RKLogger (0.1.0)
+
+DEPENDENCIES:
+  - RKLogger (from `../`)
+
+EXTERNAL SOURCES:
+  RKLogger:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RKLogger: efb179de0823e0cef635f76b35b46fb33ecfc64f
+
+PODFILE CHECKSUM: 66ffc14f80c19f5323a3714710b8fe669963fef1
+
+COCOAPODS: 1.11.2

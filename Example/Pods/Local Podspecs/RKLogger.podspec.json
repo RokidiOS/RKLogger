@@ -1,0 +1,22 @@
+{
+  "name": "RKLogger",
+  "version": "0.1.0",
+  "summary": "A short description of RKLogger.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chzy/RKLogger",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chzy": "yang.chunzhi@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/chzy/RKLogger.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "RKLogger/Classes/**/*"
+}
