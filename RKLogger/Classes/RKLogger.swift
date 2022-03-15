@@ -7,14 +7,12 @@
 
 import Foundation
 
-
-
 @objc public enum RKLogLevel: Int {
-    case verbose
-    case info
-    case warning
-    case error
-    case none
+    case none    = 0b0000
+    case error   = 0b0001
+    case warning = 0b0010
+    case info    = 0b0100
+    case verbose = 0b1111
 }
 
 @objcMembers
@@ -53,6 +51,10 @@ public class RKLogMgr: NSObject {
     
     public func saveSDKLog(_ text: String, atOnce: Bool = false) {
         
+        guard text.isEmpty == false else {
+            return
+        }
+        
         objc_sync_enter(self)
         RKLogMgr.shared.tempLog += "\(text)\n"
         objc_sync_exit(self)
@@ -90,16 +92,19 @@ public class RKLogMgr: NSObject {
 /// SDK debug 日志打印
 /// - Parameter message: 消息体
 public func RKLog<T>(_ message: T,
-              _ logLevel: RKLogLevel = RKLogMgr.shared.logLevel,
-              _ fileName: String = #file,
-              _ funcName : String = #function,
-              _ line: Int = #line) {
-    if logLevel != .none {
-        let file = (fileName as NSString).lastPathComponent
-        let log = "RKLogger:[\(RKLogMgr.shared.formatter.string(from: Date()))][\(stringForLogLevel(logLevel: logLevel))] | \(message) | [\(file) \(line) \(funcName)\(getThreadName())]"
+                     _ logLevel: RKLogLevel = .verbose,
+                     _ fileName: String = #file,
+                     _ funcName : String = #function,
+                     _ line: Int = #line) {
+    
+    let file = (fileName as NSString).lastPathComponent
+    let log = "RKLogger:[\(RKLogMgr.shared.formatter.string(from: Date()))][\(stringForLogLevel(logLevel: logLevel))] | \(message) | [\(file) \(line) \(funcName)\(getThreadName())]"
+    RKLogMgr.shared.saveSDKLog(log)
+    
+    if logLevel.rawValue & RKLogMgr.shared.logLevel.rawValue != 0 {
         print(log)
-        RKLogMgr.shared.saveSDKLog(log)
     }
+    
 }
 
 func stringForLogLevel(logLevel:RKLogLevel) -> String {
