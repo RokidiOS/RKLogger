@@ -44,9 +44,7 @@ public class RKLogMgr: NSObject {
         }
         formatter.dateFormat = "yyyyMMddHHmmss"
         
-        
         return appendingPath(logDirPath, formatter.string(from: Date()) + ".log")
-//        logDirPath.appendingPath(path: formatter.string(from: Date()) + ".log")
     }()
     
     public func saveSDKLog(_ text: String, atOnce: Bool = false) {
@@ -57,30 +55,29 @@ public class RKLogMgr: NSObject {
         
         objc_sync_enter(self)
         RKLogMgr.shared.tempLog += "\(text)\n"
-        objc_sync_exit(self)
-        
-        guard atOnce == true || RKLogMgr.shared.tempLog.count > 100000 else {
-            return
-        }
-        
-        do {
-            if !FileManager.default.fileExists(atPath: RKLogMgr.shared.logPath) {
-                FileManager.default.createFile(atPath: RKLogMgr.shared.logPath, contents: nil)
+        if atOnce == true || RKLogMgr.shared.tempLog.count > 10000 {
+            DispatchQueue.global(qos: .default).async {
+                do {
+                    if !FileManager.default.fileExists(atPath: RKLogMgr.shared.logPath) {
+                        FileManager.default.createFile(atPath: RKLogMgr.shared.logPath, contents: nil)
+                    }
+                    
+                    let fileHandle = try FileHandle(forWritingTo: URL(fileURLWithPath: RKLogMgr.shared.logPath))
+                    let stringToWrite = RKLogMgr.shared.tempLog
+                    
+                    fileHandle.seekToEndOfFile()
+                    fileHandle.write(stringToWrite.data(using: String.Encoding.utf8)!)
+                    
+                    RKLogMgr.shared.tempLog = ""
+                } catch _ {
+                    RKLogMgr.shared.tempLog = ""
+                }
             }
-            
-            let fileHandle = try FileHandle(forWritingTo: URL(fileURLWithPath: RKLogMgr.shared.logPath))
-            let stringToWrite = RKLogMgr.shared.tempLog
-            
-            fileHandle.seekToEndOfFile()
-            fileHandle.write(stringToWrite.data(using: String.Encoding.utf8)!)
-            
-            RKLogMgr.shared.tempLog = ""
-            
-        } catch _ {
         }
+        objc_sync_exit(self)
     }
     
-   class func appendingPath(_ dirPath: String, _ path: String) -> String {
+    class func appendingPath(_ dirPath: String, _ path: String) -> String {
         if let lastChar =  dirPath.last {
             let pathFirstChar = path.first
             return (lastChar == "/" || pathFirstChar == "/") ? dirPath.appending(path):dirPath.appending("/\(path)")
