@@ -1,6 +1,0 @@
-framework module RKLogger {
-  umbrella header "RKLogger-umbrella.h"
-
-  export *
-  module * { export * }
-}

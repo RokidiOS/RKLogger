@@ -1,0 +1,6 @@
+framework module RKILogger {
+  umbrella header "RKILogger-umbrella.h"
+
+  export *
+  module * { export * }
+}

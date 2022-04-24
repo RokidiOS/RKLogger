@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CocoaLumberjack
 
 @objc public enum RKLogLevel: Int {
     case none    = 0b0000
@@ -19,6 +20,24 @@ import Foundation
 public class RKLogMgr: NSObject {
     
     public static let shared = RKLogMgr()
+    
+    public override init() {
+        super.init()
+        addLogers()
+    }
+    
+    private func addLogers() {
+
+        let fileMannager = DDLogFileManagerDefault(logsDirectory: logPath)
+        let fileLogger = DDFileLogger(logFileManager: fileMannager)
+        fileLogger.doNotReuseLogFiles = true
+        fileLogger.currentLogFileInfo?.renameFile(to: formatter.string(from: Date()) + ".log")
+        fileLogger.logFormatter = self
+        DDLog.add(DDOSLogger.sharedInstance)
+        DDLog.add(fileLogger)
+        
+    }
+    
     // log 等级
     public var logLevel: RKLogLevel = .none
     
@@ -27,12 +46,10 @@ public class RKLogMgr: NSObject {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
-    // 临时保存log
-    var tempLog: String = ""
+
     // log 保存地址
     public var logPath: String = {
         let cachesPath = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
-        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"
         let logDirPath = cachesPath.path + "/rksdk_logs/" + formatter.string(from: Date())
@@ -42,45 +59,9 @@ public class RKLogMgr: NSObject {
             } catch _ {
             }
         }
-        formatter.dateFormat = "yyyyMMddHHmmss"
-        
-        return appendingPath(logDirPath, formatter.string(from: Date()) + ".log")
+        return logDirPath
     }()
     
-    public func saveSDKLog(_ text: String, atOnce: Bool = false) {
-        
-        guard text.isEmpty == false else {
-            return
-        }
-        
-        objc_sync_enter(self)
-        tempLog += "\(text)\n"
-        if atOnce == true || tempLog.count > 100000 {
-            let writeLog = tempLog
-            tempLog = ""
-            do {
-                if !FileManager.default.fileExists(atPath: logPath) {
-                    FileManager.default.createFile(atPath: logPath, contents: nil)
-                }
-                
-                let fileHandle = try FileHandle(forWritingTo: URL(fileURLWithPath: logPath))
-                if let writeData = writeLog.data(using: String.Encoding.utf8) {
-                    fileHandle.seekToEndOfFile()
-                    fileHandle.write(writeData)
-                }
-            } catch _ {
-            }
-        }
-        objc_sync_exit(self)
-    }
-    
-    class func appendingPath(_ dirPath: String, _ path: String) -> String {
-        if let lastChar =  dirPath.last {
-            let pathFirstChar = path.first
-            return (lastChar == "/" || pathFirstChar == "/") ? dirPath.appending(path):dirPath.appending("/\(path)")
-        }
-        return path
-    }
 }
 
 /// SDK debug 日志打印
@@ -92,12 +73,25 @@ public func RKLog<T>(_ message: T,
                      _ line: Int = #line) {
     
     let file = (fileName as NSString).lastPathComponent
-    let log = "RKLogger:[\(RKLogMgr.shared.formatter.string(from: Date()))][\(stringForLogLevel(logLevel: logLevel))] | \(message) | [\(file) \(line) \(funcName)\(getThreadName())]"
-//    RKLogMgr.shared.saveSDKLog(log)
-    
+    var log: String?
     if logLevel.rawValue & RKLogMgr.shared.logLevel.rawValue != 0 {
-        print(log)
+        log = "RKLogger:[\(RKLogMgr.shared.formatter.string(from: Date()))][\(stringForLogLevel(logLevel: logLevel))] | \(message) | [\(file) \(line) \(funcName)\(getThreadName())]"
     }
+    guard let log = log else { return }
+
+    switch logLevel {
+    case .none:
+        print(log)
+    case .error:
+        DDLogError("❌" + log)
+    case .warning:
+        DDLogWarn("⚠️" + log)
+    case .info:
+        DDLogInfo("💾" + log)
+    case .verbose:
+        DDLogVerbose("🔎" + log)
+    }
+
     
 }
 
@@ -133,4 +127,12 @@ func getThreadName() -> String {
         return " " + threadName
     }
 #endif
+}
+
+extension RKLogMgr: DDLogFormatter {
+    
+   public func format(message logMessage: DDLogMessage) -> String? {
+           return logMessage.message
+       }
+    
 }
