@@ -54,24 +54,21 @@ public class RKLogMgr: NSObject {
         }
         
         objc_sync_enter(self)
-        RKLogMgr.shared.tempLog += "\(text)\n"
-        if atOnce == true || RKLogMgr.shared.tempLog.count > 10000 {
-            DispatchQueue.global(qos: .default).async {
-                do {
-                    if !FileManager.default.fileExists(atPath: RKLogMgr.shared.logPath) {
-                        FileManager.default.createFile(atPath: RKLogMgr.shared.logPath, contents: nil)
-                    }
-                    
-                    let fileHandle = try FileHandle(forWritingTo: URL(fileURLWithPath: RKLogMgr.shared.logPath))
-                    let stringToWrite = RKLogMgr.shared.tempLog
-                    
-                    fileHandle.seekToEndOfFile()
-                    fileHandle.write(stringToWrite.data(using: String.Encoding.utf8)!)
-                    
-                    RKLogMgr.shared.tempLog = ""
-                } catch _ {
-                    RKLogMgr.shared.tempLog = ""
+        tempLog += "\(text)\n"
+        if atOnce == true || tempLog.count > 100000 {
+            let writeLog = tempLog
+            tempLog = ""
+            do {
+                if !FileManager.default.fileExists(atPath: logPath) {
+                    FileManager.default.createFile(atPath: logPath, contents: nil)
                 }
+                
+                let fileHandle = try FileHandle(forWritingTo: URL(fileURLWithPath: logPath))
+                if let writeData = writeLog.data(using: String.Encoding.utf8) {
+                    fileHandle.seekToEndOfFile()
+                    fileHandle.write(writeData)
+                }
+            } catch _ {
             }
         }
         objc_sync_exit(self)
