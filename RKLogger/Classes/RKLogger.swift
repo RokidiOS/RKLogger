@@ -93,7 +93,7 @@ public func RKLog<T>(_ message: T,
     
     let file = (fileName as NSString).lastPathComponent
     let log = "RKLogger:[\(RKLogMgr.shared.formatter.string(from: Date()))][\(stringForLogLevel(logLevel: logLevel))] | \(message) | [\(file) \(line) \(funcName)\(getThreadName())]"
-    RKLogMgr.shared.saveSDKLog(log)
+//    RKLogMgr.shared.saveSDKLog(log)
     
     if logLevel.rawValue & RKLogMgr.shared.logLevel.rawValue != 0 {
         print(log)
