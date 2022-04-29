@@ -9,11 +9,11 @@ import Foundation
 import CocoaLumberjack
 
 @objc public enum RKLogLevel: Int {
-    case none    = 0b0000
-    case error   = 0b0001
-    case warning = 0b0010
-    case info    = 0b0100
-    case verbose = 0b1111
+    case verbose = 0
+    case info    = 1
+    case warning = 2
+    case error   = 3
+    case none    = 4
 }
 
 @objcMembers
@@ -80,8 +80,6 @@ public func RKLog<T>(_ message: T,
     guard let log = log else { return }
 
     switch logLevel {
-    case .none:
-        print(log)
     case .error:
         DDLogError("❌" + log)
     case .warning:
@@ -90,9 +88,9 @@ public func RKLog<T>(_ message: T,
         DDLogInfo("💾" + log)
     case .verbose:
         DDLogVerbose("🔎" + log)
+    default:
+        print(log)
     }
-
-    
 }
 
 func stringForLogLevel(logLevel:RKLogLevel) -> String {
