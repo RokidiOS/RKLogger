@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0894EB49C27FC406D15CBFD3B13EF9B8 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 99510CDFF21042F43F958DBD8CE1C770 /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B491361F87D60F7021E9DCE18CD6AF9 /* RKILogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E96D79A6443F4954148A906057F9799F /* RKILogger-dummy.m */; };
 		1430A92CD9E383334F3EA9F73F8EBD37 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C88D4AE428186681B68A0A7FBE10A12 /* DDFileLogger.m */; };
 		14A72A70D928B3FB748E74BA584BE168 /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = B35184FC30DD6920A0C4403B209EA207 /* DDASLLogCapture.m */; };
+		192F77C5188D8AE6E39AD266628430ED /* RKLoggerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF14ED5B52B53B3A5745F3BC8F315B /* RKLoggerInterface.swift */; };
 		1F34C651DAD3032F45A73AD24A60F2A2 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F587ED316891135AC2E1B1788FD901 /* DDLegacyMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F8D7BA4FD118DAE1C9EBA676DDFE6A8 /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 927EAE238003ADDF19F151D4AF3F131C /* DDTTYLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		200DC2D4BBF146E6E68A6F0637C63C9B /* DDContextFilterLogFormatter+Deprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E6AE410DDA64BBC03C68CD03C198E2 /* DDContextFilterLogFormatter+Deprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,16 +19,18 @@
 		31998DC0CB34249072EE62476E351BF8 /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F10649D10FE2BB777FF458E0495F67 /* DDDispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36B207CCA7C2F61A8425B1A28E30AB0B /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9221EED63E6F5AC161F7EA4BCDFBE9 /* DDMultiFormatter.m */; };
 		488C37EE2C2A945FA8FB3961EE3FC65E /* CLIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 204231B12DAB5BCA088A5786C1D7BF8E /* CLIColor.m */; };
-		49A1756AF37B3EB78E6889DD9E227357 /* RKLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9F02D23623BCCD0EEB5179EEC83249 /* RKLogger.swift */; };
 		51FED3755177163ED30E8CA08B5A7111 /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = 3535DDF95FA803456E98910C8945A714 /* CocoaLumberjack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53F8AE0D8E3209B1F6C960ED956B40BB /* Pods-RKLogger_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C80580C821993F4B9ADBF451CCD6F828 /* Pods-RKLogger_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61CA887135EED59EAB232FF788993374 /* Pods-RKLogger_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2955600F2D270DEB94F9AB2A1590FF13 /* Pods-RKLogger_Tests-dummy.m */; };
+		63D2E3ECD717F640FD309D399884EBB1 /* RKLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A50E593CE5C4608F95EB50EA655C20 /* RKLogger.swift */; };
 		68DAF93592E1F5DEDF0D26882F850BFD /* DDOSLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E567C8E808103A28BAD2C6C80822D25B /* DDOSLogger.m */; };
 		6B83568DCE55305B5CC82852EC5FA5E6 /* DDContextFilterLogFormatter+Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 53661F03641FA9C23040DE46805EBFAF /* DDContextFilterLogFormatter+Deprecated.m */; };
+		6BADBC2FB28479C3561FA4E538F25954 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		6E87F520578C1F9D3BB3806840EBFCD6 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = D9011C454399B7C976627EA1DE51CC13 /* DDContextFilterLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED06C514240B57C67E8691B110B35D3 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2727A0E3F50A6BB2341038B0ECAED959 /* DDMultiFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72971B5127DF77F1BE1604BD6A2BF90A /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 90CA8C3D314B4A24ABAF907234AF4825 /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		777FEF16BF7265B9CAE65FFC906A6212 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7E54472ED32E2DAE30ABE0497A149591 /* RKILogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 038AE72B4EB43A4C9F239C3CE7E2DECF /* RKILogger-dummy.m */; };
 		88A5C0BE281EDAC69581AB73EF3DCB68 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D57D426361AD9DD6217AD2C8E585E4 /* DDASLLogger.m */; };
 		8F73ECD186C2D48DE165790C29F54665 /* DDAssert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AD4F5D91E4C65FA971053962E41B8B /* DDAssert.swift */; };
 		902E7500FCA4EFFADFDA02FFC5F06CDE /* CLIColor.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE676815D348425BFE962D8F4111F37 /* CLIColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,16 +39,15 @@
 		A777E95A971A560B829677808B28BA81 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF064C786D417323FA8C5AED2CA34288 /* DDContextFilterLogFormatter.m */; };
 		A7BD37505F10C8D98E413F0086DC0C51 /* DDLog+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB397E8B215A191236DDBB7D11DD1DE /* DDLog+Combine.swift */; };
 		B0D75AEEF50756B78FDED3E71A14150C /* DDFileLogger+Buffering.m in Sources */ = {isa = PBXBuildFile; fileRef = DE968CC627F4FBBCF684ABA925170F08 /* DDFileLogger+Buffering.m */; };
+		B2D26DF6FB27337FF8B02DF8AC3B2C76 /* RKILogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A37C70EA9EF0B2895A70187E2AD5BBEC /* RKILogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3DBCEDE51AC4D56847292AC38B1CF72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		B6B6C7CF4924C91832C2A2580D5AA395 /* DDLoggerNames.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D21C61CDA7E942E6044751AAED1B0C5 /* DDLoggerNames.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCD2B62BBAAB3A21BC3A2D21127C0FB9 /* SwiftLogLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 25CF056C7D2C62358ABEBCF8E919B427 /* SwiftLogLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C615DE7F278A720EC3F40B0B438F7414 /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CDB737290981E1548DD6E409FC91178 /* DDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC97187E6D4D89D6B7D1C0D20218E394 /* CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FD9C1AB9A0DEDB26501AAB5A42DE0F /* CocoaLumberjack-dummy.m */; };
-		CEB7A6ACEE16A78B4DDD36C6BB076F89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		D032AC2D18990248048B5219856C747C /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 239A9B19CBB5707049AECA365CFB48B6 /* DDASLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D498013780CC61C59E0C5C0FEC56649B /* DDLoggerNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3060A9CAA66B6ED5C59DA16A4FF01 /* DDLoggerNames.m */; };
 		D8CDBB10C871D6B61AFC72F2284058FD /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D60A5D2778FB565F98D659E9E43801 /* DDLog.m */; };
-		D9D80277485DB5220E20D48686DE9BDA /* RKILogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F035B42E2F695847EFC8EA857EB7152E /* RKILogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E164D0DB90DEC45577708F074DED9EF7 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 413BCA5397EBD70634306EA3090CC2EB /* DDTTYLogger.m */; };
 		E230A1E35F246226A458E51FAB686EDF /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C84E59F78D91162344A0E63616DA0EA9 /* DDLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6F23348A4F4D393CF7054B49663AD /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 36E8C18F55C036A2CCB33BF7A2EA6F09 /* DDAbstractDatabaseLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,37 +59,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6B11D6762E0C7878D5EA08A738112DA2 /* PBXContainerItemProxy */ = {
+		27BC9E77432B948E3ADD4B9E563C7FE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E95654B155D25890BE8E26081FCA8265;
 			remoteInfo = CocoaLumberjack;
 		};
-		782DD2DA569381DDCD1902107C79F580 /* PBXContainerItemProxy */ = {
+		7EF7B7C1B91A76FF0B54D14A7EE7E612 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E95654B155D25890BE8E26081FCA8265;
+			remoteInfo = CocoaLumberjack;
+		};
+		924B18D15445BF27E65104505D801F82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B8C6D3567FD175831DA9E2860191B0FC;
 			remoteInfo = RKILogger;
 		};
-		C30825B151CE25A0ED53E93E8E923444 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E95654B155D25890BE8E26081FCA8265;
-			remoteInfo = CocoaLumberjack;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038AE72B4EB43A4C9F239C3CE7E2DECF /* RKILogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RKILogger-dummy.m"; sourceTree = "<group>"; };
 		0A43CE6F79CC2184941A3B0CE1D9A353 /* Pods-RKLogger_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RKLogger_Tests-Info.plist"; sourceTree = "<group>"; };
 		0C88D4AE428186681B68A0A7FBE10A12 /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Sources/CocoaLumberjack/DDFileLogger.m; sourceTree = "<group>"; };
 		0D21C61CDA7E942E6044751AAED1B0C5 /* DDLoggerNames.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLoggerNames.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDLoggerNames.h; sourceTree = "<group>"; };
 		0EB3060A9CAA66B6ED5C59DA16A4FF01 /* DDLoggerNames.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLoggerNames.m; path = Sources/CocoaLumberjack/DDLoggerNames.m; sourceTree = "<group>"; };
+		10D627DFD2383B92B4FD09EB2E9119C9 /* RKILogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RKILogger.modulemap; sourceTree = "<group>"; };
 		1C88A95D7CC2468A290CE560D93000DF /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDLog.h; sourceTree = "<group>"; };
-		1C9F02D23623BCCD0EEB5179EEC83249 /* RKLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RKLogger.swift; path = RKLogger/Classes/RKLogger.swift; sourceTree = "<group>"; };
-		1F123439F1C4A9B1A1BFD467EAB2188D /* RKILogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RKILogger.release.xcconfig; sourceTree = "<group>"; };
 		1F62ED408E34C92E989F99DC908C7AED /* CocoaLumberjack-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-umbrella.h"; sourceTree = "<group>"; };
 		204231B12DAB5BCA088A5786C1D7BF8E /* CLIColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLIColor.m; path = Sources/CocoaLumberjack/CLI/CLIColor.m; sourceTree = "<group>"; };
 		21F587ED316891135AC2E1B1788FD901 /* DDLegacyMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLegacyMacros.h; path = "Sources/CocoaLumberjack/Supporting Files/DDLegacyMacros.h"; sourceTree = "<group>"; };
@@ -103,13 +104,15 @@
 		3E9221EED63E6F5AC161F7EA4BCDFBE9 /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
 		413BCA5397EBD70634306EA3090CC2EB /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Sources/CocoaLumberjack/DDTTYLogger.m; sourceTree = "<group>"; };
 		53661F03641FA9C23040DE46805EBFAF /* DDContextFilterLogFormatter+Deprecated.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DDContextFilterLogFormatter+Deprecated.m"; path = "Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter+Deprecated.m"; sourceTree = "<group>"; };
+		53B375E4FEBD7B8A061E1001DEC64A9C /* RKILogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKILogger-prefix.pch"; sourceTree = "<group>"; };
 		55D57D426361AD9DD6217AD2C8E585E4 /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Sources/CocoaLumberjack/DDASLLogger.m; sourceTree = "<group>"; };
 		5643DBD5B0FC246B16086D5164A28A5D /* Pods-RKLogger_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RKLogger_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		56FD9C1AB9A0DEDB26501AAB5A42DE0F /* CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
 		59AD4F5D91E4C65FA971053962E41B8B /* DDAssert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DDAssert.swift; path = Sources/CocoaLumberjackSwift/DDAssert.swift; sourceTree = "<group>"; };
+		5A68D46442ED7230A02B63E68673D827 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		5B46F4D0E90A66F91E5FF764B89E50BC /* Pods-RKLogger_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RKLogger_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5C7E381C72C7C39866DECC3A2CE7C679 /* RKILogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RKILogger.debug.xcconfig; sourceTree = "<group>"; };
 		5CDB737290981E1548DD6E409FC91178 /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Sources/CocoaLumberjack/include/CocoaLumberjack/DDLog+LOGV.h"; sourceTree = "<group>"; };
-		5E197B2BFB566F2C564A52767A3805F8 /* RKILogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RKILogger.debug.xcconfig; sourceTree = "<group>"; };
 		5F6B7C3F7B35B7645418C66CA3668916 /* Pods-RKLogger_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RKLogger_Tests.modulemap"; sourceTree = "<group>"; };
 		65281F4741B7483874A529EE53B3FAB2 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		67A5A4AAAD09B8EBC9E95FC0CDC245CC /* Pods-RKLogger_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-RKLogger_Tests"; path = Pods_RKLogger_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,41 +120,40 @@
 		6BE5400A04D4F804DA37EA377D515CF7 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Sources/CocoaLumberjack/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		6C85ADF16A6547151EE0D690C0C882B7 /* Pods-RKLogger_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RKLogger_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		748202A9BE43A829503F466B057344CA /* RKILogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RKILogger.modulemap; sourceTree = "<group>"; };
 		7DF59DCBCCDCDE77EC43B34ED1B610B7 /* DDFileLogger+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Internal.h"; path = "Sources/CocoaLumberjack/DDFileLogger+Internal.h"; sourceTree = "<group>"; };
 		7FAD0193CA3CAC222566696BBB4F5D9F /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
 		81E9179E00F3511A2065E51D3AD919AB /* CocoaLumberjack-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaLumberjack-Info.plist"; sourceTree = "<group>"; };
+		83950CF9131F043FF9258D35A0DADCD3 /* RKILogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RKILogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		88C8687DC1AE478EB4A85F83D31CC814 /* RKILogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RKILogger.release.xcconfig; sourceTree = "<group>"; };
 		8D394A65A2BC7C995203C9D6054C0420 /* CocoaLumberjack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.debug.xcconfig; sourceTree = "<group>"; };
 		8E082FE7869D9F653F238BCE07D8D82E /* DDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDAssertMacros.h; sourceTree = "<group>"; };
-		9022F925C5348862573275C90A9828DE /* RKILogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKILogger-prefix.pch"; sourceTree = "<group>"; };
 		90CA8C3D314B4A24ABAF907234AF4825 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDFileLogger.h; sourceTree = "<group>"; };
 		927EAE238003ADDF19F151D4AF3F131C /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDTTYLogger.h; sourceTree = "<group>"; };
-		97615FA3ECE09146F8A0E3AE76F4E7B5 /* RKILogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RKILogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99510CDFF21042F43F958DBD8CE1C770 /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDASLLogCapture.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FB397E8B215A191236DDBB7D11DD1DE /* DDLog+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DDLog+Combine.swift"; path = "Sources/CocoaLumberjackSwift/DDLog+Combine.swift"; sourceTree = "<group>"; };
-		A21140387F6B5467B0E121B9F2A76213 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A37C70EA9EF0B2895A70187E2AD5BBEC /* RKILogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKILogger-umbrella.h"; sourceTree = "<group>"; };
 		A77A708C8B06F9E6B68F941DE9815D34 /* Pods-RKLogger_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RKLogger_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		AF064C786D417323FA8C5AED2CA34288 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Sources/CocoaLumberjack/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		B35184FC30DD6920A0C4403B209EA207 /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Sources/CocoaLumberjack/DDASLLogCapture.m; sourceTree = "<group>"; };
+		B7A50E593CE5C4608F95EB50EA655C20 /* RKLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RKLogger.swift; path = RKLogger/Classes/RKLogger.swift; sourceTree = "<group>"; };
 		C235A75C6C008016C0F79391164A6E44 /* Pods-RKLogger_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RKLogger_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C261436D14052AE3C35F240BCD155CAC /* CocoaLumberjack */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaLumberjack; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33A67C80CCA698B54393AC5129DE8E4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		C3D60A5D2778FB565F98D659E9E43801 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Sources/CocoaLumberjack/DDLog.m; sourceTree = "<group>"; };
 		C80580C821993F4B9ADBF451CCD6F828 /* Pods-RKLogger_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RKLogger_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C84E59F78D91162344A0E63616DA0EA9 /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDLogMacros.h; sourceTree = "<group>"; };
 		CAEE9BBC31FFF1C2000A026AF996806B /* DDFileLogger+Buffering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Buffering.h"; path = "Sources/CocoaLumberjack/include/CocoaLumberjack/DDFileLogger+Buffering.h"; sourceTree = "<group>"; };
 		CDE676815D348425BFE962D8F4111F37 /* CLIColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLIColor.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/CLIColor.h; sourceTree = "<group>"; };
-		D4D8152E11CC315674D4048FD32535E8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		D4F10649D10FE2BB777FF458E0495F67 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		D9011C454399B7C976627EA1DE51CC13 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
 		DE968CC627F4FBBCF684ABA925170F08 /* DDFileLogger+Buffering.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DDFileLogger+Buffering.m"; path = "Sources/CocoaLumberjack/Extensions/DDFileLogger+Buffering.m"; sourceTree = "<group>"; };
 		E339EC0E05406157329C8F60A4A75138 /* CocoaLumberjack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaLumberjack.swift; path = Sources/CocoaLumberjackSwift/CocoaLumberjack.swift; sourceTree = "<group>"; };
 		E567C8E808103A28BAD2C6C80822D25B /* DDOSLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDOSLogger.m; path = Sources/CocoaLumberjack/DDOSLogger.m; sourceTree = "<group>"; };
-		E96D79A6443F4954148A906057F9799F /* RKILogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RKILogger-dummy.m"; sourceTree = "<group>"; };
-		F035B42E2F695847EFC8EA857EB7152E /* RKILogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RKILogger-umbrella.h"; sourceTree = "<group>"; };
+		ECEF14ED5B52B53B3A5745F3BC8F315B /* RKLoggerInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RKLoggerInterface.swift; path = RKLogger/Classes/RKLoggerInterface.swift; sourceTree = "<group>"; };
+		EE62BE8D1A84A548011201E1B8B54768 /* RKILogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RKILogger-Info.plist"; sourceTree = "<group>"; };
 		F817676FDD19DAA5E2D9AB0766CF3BF1 /* DDOSLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDOSLogger.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDOSLogger.h; sourceTree = "<group>"; };
 		F8D6C07686E949671A70C5716502A9EC /* CocoaLumberjack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.release.xcconfig; sourceTree = "<group>"; };
-		FEF5DF76AFE38932BBE6933B841F4B7C /* RKILogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RKILogger-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,25 +173,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AC00A917A975E42B1052914CBDC2D1D /* Frameworks */ = {
+		7F237D7A1896E5087EA126E3057BE7A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB7A6ACEE16A78B4DDD36C6BB076F89 /* Foundation.framework in Frameworks */,
+				6BADBC2FB28479C3561FA4E538F25954 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CB9F540B3903E7E6887AC94F08D27FF /* Pod */ = {
+		0C5C0AD9F614054F1086ED129F463960 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D4D8152E11CC315674D4048FD32535E8 /* LICENSE */,
-				A21140387F6B5467B0E121B9F2A76213 /* README.md */,
-				97615FA3ECE09146F8A0E3AE76F4E7B5 /* RKILogger.podspec */,
+				C33A67C80CCA698B54393AC5129DE8E4 /* LICENSE */,
+				5A68D46442ED7230A02B63E68673D827 /* README.md */,
+				83950CF9131F043FF9258D35A0DADCD3 /* RKILogger.podspec */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		0E0EA2CECCCB3FDADC7497F8CDA977D8 /* RKILogger */ = {
+			isa = PBXGroup;
+			children = (
+				B7A50E593CE5C4608F95EB50EA655C20 /* RKLogger.swift */,
+				ECEF14ED5B52B53B3A5745F3BC8F315B /* RKLoggerInterface.swift */,
+				0C5C0AD9F614054F1086ED129F463960 /* Pod */,
+				B5A8DDFAB4AE0E2E6BB43F7D90468BF5 /* Support Files */,
+			);
+			name = RKILogger;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		2305CB3DDEF0B5DD6625B930829BECDE /* Pods-RKLogger_Tests */ = {
@@ -299,29 +313,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		593E55DE950E54DEC15ECEC950F2C6DC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				748202A9BE43A829503F466B057344CA /* RKILogger.modulemap */,
-				E96D79A6443F4954148A906057F9799F /* RKILogger-dummy.m */,
-				FEF5DF76AFE38932BBE6933B841F4B7C /* RKILogger-Info.plist */,
-				9022F925C5348862573275C90A9828DE /* RKILogger-prefix.pch */,
-				F035B42E2F695847EFC8EA857EB7152E /* RKILogger-umbrella.h */,
-				5E197B2BFB566F2C564A52767A3805F8 /* RKILogger.debug.xcconfig */,
-				1F123439F1C4A9B1A1BFD467EAB2188D /* RKILogger.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/RKILogger";
-			sourceTree = "<group>";
-		};
-		696E229F2CE18C66C6DC44830CB24F75 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EBCDB17FD7D62CFD5AC601F6208AF29F /* RKILogger */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		8BA64A7003E23F6EF4021F2421864796 /* CocoaLumberjack */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,11 +335,26 @@
 			name = Swift;
 			sourceTree = "<group>";
 		};
+		B5A8DDFAB4AE0E2E6BB43F7D90468BF5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				10D627DFD2383B92B4FD09EB2E9119C9 /* RKILogger.modulemap */,
+				038AE72B4EB43A4C9F239C3CE7E2DECF /* RKILogger-dummy.m */,
+				EE62BE8D1A84A548011201E1B8B54768 /* RKILogger-Info.plist */,
+				53B375E4FEBD7B8A061E1001DEC64A9C /* RKILogger-prefix.pch */,
+				A37C70EA9EF0B2895A70187E2AD5BBEC /* RKILogger-umbrella.h */,
+				5C7E381C72C7C39866DECC3A2CE7C679 /* RKILogger.debug.xcconfig */,
+				88C8687DC1AE478EB4A85F83D31CC814 /* RKILogger.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RKILogger";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				696E229F2CE18C66C6DC44830CB24F75 /* Development Pods */,
+				FA021D039C263318082AC02A2EAC81DD /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				320ED2F2348655F220D240EB856D3CE1 /* Pods */,
 				42FE9520257099C113B37CE43461AC38 /* Products */,
@@ -364,15 +370,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EBCDB17FD7D62CFD5AC601F6208AF29F /* RKILogger */ = {
+		FA021D039C263318082AC02A2EAC81DD /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1C9F02D23623BCCD0EEB5179EEC83249 /* RKLogger.swift */,
-				0CB9F540B3903E7E6887AC94F08D27FF /* Pod */,
-				593E55DE950E54DEC15ECEC950F2C6DC /* Support Files */,
+				0E0EA2CECCCB3FDADC7497F8CDA977D8 /* RKILogger */,
 			);
-			name = RKILogger;
-			path = ../..;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,11 +418,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1193E86ADD3BE5BD5A138138B0D93D3 /* Headers */ = {
+		C6DCDC9786CFF08CA0916025193B641F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9D80277485DB5220E20D48686DE9BDA /* RKILogger-umbrella.h in Headers */,
+				B2D26DF6FB27337FF8B02DF8AC3B2C76 /* RKILogger-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +441,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				723DDC5D57A9BC78DC19B787DA0C8C63 /* PBXTargetDependency */,
-				29DCA00BA563F8D4264E00AB4748E859 /* PBXTargetDependency */,
+				446463FEFFF9ACF497F26293F1895D29 /* PBXTargetDependency */,
+				37119AC864EEF514904F57522ADC32AF /* PBXTargetDependency */,
 			);
 			name = "Pods-RKLogger_Tests";
 			productName = Pods_RKLogger_Tests;
@@ -448,17 +451,17 @@
 		};
 		B8C6D3567FD175831DA9E2860191B0FC /* RKILogger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3150B2A1F0B9ABE0610F9E2F642BC0B1 /* Build configuration list for PBXNativeTarget "RKILogger" */;
+			buildConfigurationList = A5AAF9A9ED8E2A0A6AB06F1D6239F8E3 /* Build configuration list for PBXNativeTarget "RKILogger" */;
 			buildPhases = (
-				C1193E86ADD3BE5BD5A138138B0D93D3 /* Headers */,
-				54977A4B42784BCD8BAE8CEADAE7F972 /* Sources */,
-				9AC00A917A975E42B1052914CBDC2D1D /* Frameworks */,
-				43F4A5A2FFF453F048529239A4B7E1C5 /* Resources */,
+				C6DCDC9786CFF08CA0916025193B641F /* Headers */,
+				BCD217900F81865559860B44C6033F29 /* Sources */,
+				7F237D7A1896E5087EA126E3057BE7A1 /* Frameworks */,
+				51AB8711FC085717695110865C905F9C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B29BDB7750948D32369DF32FBB3CF3B2 /* PBXTargetDependency */,
+				E2F9EC6182813E010EDFEF27CD99A956 /* PBXTargetDependency */,
 			);
 			name = RKILogger;
 			productName = RKILogger;
@@ -513,14 +516,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		43F4A5A2FFF453F048529239A4B7E1C5 /* Resources */ = {
+		45D451C838FABB4FD9D1547022D95E1D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45D451C838FABB4FD9D1547022D95E1D /* Resources */ = {
+		51AB8711FC085717695110865C905F9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -537,20 +540,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		54977A4B42784BCD8BAE8CEADAE7F972 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B491361F87D60F7021E9DCE18CD6AF9 /* RKILogger-dummy.m in Sources */,
-				49A1756AF37B3EB78E6889DD9E227357 /* RKLogger.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		86E5D09B1ED783491B07CF4AC8728421 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				61CA887135EED59EAB232FF788993374 /* Pods-RKLogger_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD217900F81865559860B44C6033F29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E54472ED32E2DAE30ABE0497A149591 /* RKILogger-dummy.m in Sources */,
+				63D2E3ECD717F640FD309D399884EBB1 /* RKLogger.swift in Sources */,
+				192F77C5188D8AE6E39AD266628430ED /* RKLoggerInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,30 +586,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		29DCA00BA563F8D4264E00AB4748E859 /* PBXTargetDependency */ = {
+		37119AC864EEF514904F57522ADC32AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RKILogger;
 			target = B8C6D3567FD175831DA9E2860191B0FC /* RKILogger */;
-			targetProxy = 782DD2DA569381DDCD1902107C79F580 /* PBXContainerItemProxy */;
+			targetProxy = 924B18D15445BF27E65104505D801F82 /* PBXContainerItemProxy */;
 		};
-		723DDC5D57A9BC78DC19B787DA0C8C63 /* PBXTargetDependency */ = {
+		446463FEFFF9ACF497F26293F1895D29 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaLumberjack;
 			target = E95654B155D25890BE8E26081FCA8265 /* CocoaLumberjack */;
-			targetProxy = C30825B151CE25A0ED53E93E8E923444 /* PBXContainerItemProxy */;
+			targetProxy = 27BC9E77432B948E3ADD4B9E563C7FE4 /* PBXContainerItemProxy */;
 		};
-		B29BDB7750948D32369DF32FBB3CF3B2 /* PBXTargetDependency */ = {
+		E2F9EC6182813E010EDFEF27CD99A956 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaLumberjack;
 			target = E95654B155D25890BE8E26081FCA8265 /* CocoaLumberjack */;
-			targetProxy = 6B11D6762E0C7878D5EA08A738112DA2 /* PBXContainerItemProxy */;
+			targetProxy = 7EF7B7C1B91A76FF0B54D14A7EE7E612 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0DE6673C910BD80AE65C824A880971AC /* Release */ = {
+		1948CDAE31B3D2658352CE3FF9E0E864 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F123439F1C4A9B1A1BFD467EAB2188D /* RKILogger.release.xcconfig */;
+			baseConfigurationReference = 88C8687DC1AE478EB4A85F83D31CC814 /* RKILogger.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -634,37 +638,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		0F4489510A7C00144AE8E600BE352186 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E197B2BFB566F2C564A52767A3805F8 /* RKILogger.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RKILogger/RKILogger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RKILogger/RKILogger-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RKILogger/RKILogger.modulemap";
-				PRODUCT_MODULE_NAME = RKILogger;
-				PRODUCT_NAME = RKILogger;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		30BFCCB75F806DF1969224390AE6BD58 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -922,6 +895,37 @@
 			};
 			name = Release;
 		};
+		DDF56E180441F743E4AAEB703AA97269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C7E381C72C7C39866DECC3A2CE7C679 /* RKILogger.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RKILogger/RKILogger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RKILogger/RKILogger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RKILogger/RKILogger.modulemap";
+				PRODUCT_MODULE_NAME = RKILogger;
+				PRODUCT_NAME = RKILogger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -934,20 +938,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3150B2A1F0B9ABE0610F9E2F642BC0B1 /* Build configuration list for PBXNativeTarget "RKILogger" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0F4489510A7C00144AE8E600BE352186 /* Debug */,
-				0DE6673C910BD80AE65C824A880971AC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
 				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5AAF9A9ED8E2A0A6AB06F1D6239F8E3 /* Build configuration list for PBXNativeTarget "RKILogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDF56E180441F743E4AAEB703AA97269 /* Debug */,
+				1948CDAE31B3D2658352CE3FF9E0E864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

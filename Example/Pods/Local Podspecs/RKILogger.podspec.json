@@ -1,6 +1,6 @@
 {
   "name": "RKILogger",
-  "version": "0.1.6",
+  "version": "0.2.4",
   "summary": "RK RKILogger.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/RokidiOS/RKLogger",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/RokidiOS/RKLogger.git",
-    "tag": "0.1.6"
+    "tag": "0.2.4"
   },
   "platforms": {
     "ios": "10.0"

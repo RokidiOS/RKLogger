@@ -1,5 +1,5 @@
 import XCTest
-import RKLogger
+import RKILogger
 
 class Tests: XCTestCase {
     

@@ -2,7 +2,7 @@ PODS:
   - CocoaLumberjack/Core (3.7.4)
   - CocoaLumberjack/Swift (3.7.4):
     - CocoaLumberjack/Core
-  - RKILogger (0.1.6):
+  - RKILogger (0.2.4):
     - CocoaLumberjack/Swift (~> 3.7.4)
 
 DEPENDENCIES:
@@ -18,8 +18,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
-  RKILogger: 44d615fdb0e22376f047521342dceb326978917b
+  RKILogger: 91bbd7335525da4d0e695465961706824a890985
 
 PODFILE CHECKSUM: d202c0fa574e55a33b9b03f21e446923eaaaa6b0
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
