@@ -46,6 +46,11 @@ public class RKLogMgr: NSObject, RKLoggerInterface {
     public var logFileName: String? {
         get {
             return fileLogger?.currentLogFileInfo?.fileName
+        } set {
+            guard let logFileName = newValue, logFileName.isEmpty == false else {
+                return
+            }
+            fileLogger?.currentLogFileInfo?.renameFile(to: logFileName)
         }
     }
     
@@ -64,6 +69,10 @@ public class RKLogMgr: NSObject, RKLoggerInterface {
     public func clearLogCache() {
         fileLogger?.currentLogFileInfo?.reset()
     }
+    
+    // MARK: - 自定义
+    
+    public var iLogger: RKILogger?
     
     lazy var formatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -124,7 +133,7 @@ public func RKLog<T>(_ message: T,
     }
 }
 
-fileprivate func stringForLogLevel(logLevel:RKLogLevel) -> String {
+func stringForLogLevel(logLevel: RKLogLevel) -> String {
     switch logLevel {
     case .verbose:
         return "VERBOSE"

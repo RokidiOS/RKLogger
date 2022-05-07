@@ -20,7 +20,7 @@ import Foundation
     // log 等级 @RKLogLevel 默认None 关闭
     @objc var logLevel: RKLogLevel { get set }
     // log 文件名，带路径
-    @objc var logFileName: String? { get }
+    @objc var logFileName: String? { get set }
     // log 最大容量（kb），默认不限，超过将会回滚， 和周期哪个先触发 先生效
     @objc var maxFileSize: UInt64 { get set }
     // log 回滚周期（s），默认24小时，超过将会回滚， 和最大容量哪个先触发 先生效
