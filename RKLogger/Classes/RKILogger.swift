@@ -49,6 +49,12 @@ public class RKILogger: NSObject, RKLoggerInterface {
     // log 等级
     public var logLevel: RKLogLevel = .None
     
+    public var logFilePath: String? {
+        get {
+            return fileLogger?.currentLogFileInfo?.filePath
+        }
+    }
+
     public var logFileName: String? {
         get {
             return fileLogger?.currentLogFileInfo?.fileName
