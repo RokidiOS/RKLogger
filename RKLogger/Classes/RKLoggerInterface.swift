@@ -22,7 +22,7 @@ import Foundation
     // log 文件路径
     @objc var logFilePath: String? { get }
     // log 文件名
-    @objc var logFileName: String? { get set }
+    @objc var logFileName: String? { get }
     // log 最大容量（Mb），默认不限，超过将会回滚， 和周期哪个先触发 先生效
     @objc var maxFileSize: UInt64 { get set }
     // log 回滚周期（s），默认24小时，超过将会回滚， 和最大容量哪个先触发 先生效

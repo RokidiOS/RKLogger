@@ -30,14 +30,14 @@ public class RKLogMgr: NSObject, RKLoggerInterface {
         
         fileLogger.doNotReuseLogFiles = false
         
-        print("RKLoger: logFilePath: \(fileLogger.currentLogFileInfo?.filePath ?? "")")
+        // 默认 10G
+        fileLogger.maximumFileSize = 10 * 1024 * 1024 * 1024
+        
+        print("RKLoger: logFilePath: \(fileLogger.currentLogFileInfo?.filePath ?? "") | \(fileLogger.currentLogFileInfo?.fileName ?? "")")
         
         fileLogger.logFormatter = self
         DDLog.add(DDOSLogger.sharedInstance)
         DDLog.add(fileLogger)
-        
-        // 默认 10G
-        maxFileSize = 10 * 1024
     }
     
     // log 等级
@@ -52,11 +52,6 @@ public class RKLogMgr: NSObject, RKLoggerInterface {
     public var logFileName: String? {
         get {
             return fileLogger?.currentLogFileInfo?.fileName
-        } set {
-            guard let logFileName = newValue, logFileName.isEmpty == false else {
-                return
-            }
-            fileLogger?.currentLogFileInfo?.renameFile(to: logFileName)
         }
     }
     
