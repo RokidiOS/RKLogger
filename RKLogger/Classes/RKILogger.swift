@@ -39,6 +39,8 @@ public class RKILogger: NSObject, RKLoggerInterface {
         print("RKILoger: logFilePath: \(fileLogger.currentLogFileInfo?.filePath ?? "")")
         
         fileLogger.logFormatter = self
+        fileLogger.currentLogFileInfo?.renameFile(to: "rkILogger.log")
+        fileLogger.maximumFileSize = 10 * 1024 * 1024 * 1024
         DDLog.add(DDOSLogger.sharedInstance)
         DDLog.add(fileLogger)
         
