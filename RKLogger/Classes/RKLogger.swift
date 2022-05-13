@@ -37,11 +37,17 @@ public class RKLogMgr: NSObject, RKLoggerInterface {
         DDLog.add(fileLogger)
         
         // 默认 10G
-        maxFileSize = 10 * 1024 * 1024 * 1024
+        maxFileSize = 10 * 1024
     }
     
     // log 等级
     public var logLevel: RKLogLevel = .None
+    
+    public var logFilePath: String? {
+        get {
+            return fileLogger?.currentLogFileInfo?.filePath
+        }
+    }
     
     public var logFileName: String? {
         get {
@@ -56,7 +62,7 @@ public class RKLogMgr: NSObject, RKLoggerInterface {
     
     public var maxFileSize: UInt64 = 0 {
         didSet {
-            fileLogger?.maximumFileSize = UInt64(maxFileSize) * 1000
+            fileLogger?.maximumFileSize = maxFileSize * 1024 * 1024
         }
     }
     
